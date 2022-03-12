@@ -18,18 +18,19 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Test2 {
 
 	@Test
-	public void validateGoogle() throws IOException{
-		
+	public void validateGoogle() throws IOException {
+
 		WebDriverManager.chromedriver().setup();
-		WebDriver wd=new ChromeDriver();
+		WebDriver wd = new ChromeDriver();
 		wd.manage().window().maximize();
 		wd.get("https://www.bing.com/");
-		WebElement element= wd.findElement(By.name("q"));
+		WebElement element = wd.findElement(By.name("q"));
 		element.sendKeys("chennai");
 		element.submit();
-	
-	File src=	((TakesScreenshot)wd).getScreenshotAs(OutputType.FILE);
-	FileHandler.copy(src, new File("C:/seleniumWorkspace2/GitJenkinsTest/screenshot/bing.png"));	
+
+		File src = ((TakesScreenshot) wd).getScreenshotAs(OutputType.FILE);
+		FileHandler.copy(src, new File("C:/seleniumWorkspace2/GitJenkinsTest/screenshot/bing.png"));
+		wd.quit();
 	}
-	
+
 }

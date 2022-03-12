@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 12.6 sec <<< FAILURE! - in TestSuite
+validateGoogle(sample1.Test1)  Time elapsed: 7.127 sec  <<< FAILURE!
+java.lang.ArithmeticException: / by zero
+	at sample1.Test1.validateGoogle(Test1.java:37)
+

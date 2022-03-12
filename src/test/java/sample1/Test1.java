@@ -27,9 +27,14 @@ public class Test1 {
 		WebElement element= wd.findElement(By.name("q"));
 		element.sendKeys("chennai");
 		element.submit();
+		
+		
 	
 	File src=	((TakesScreenshot)wd).getScreenshotAs(OutputType.FILE);
 	FileHandler.copy(src, new File("C:/seleniumWorkspace2/GitJenkinsTest/screenshot/goolge.png"));	
+		wd.quit();
+	
+		int i=2/0;
 	}
 	
 }
